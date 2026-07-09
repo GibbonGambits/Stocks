@@ -116,3 +116,6 @@ run_date,run_time,ticker,rebound_pct,ref_price,status,graded_date,max_pct_2td,hi
 2026-07-08,07:53,IP,40,36.20,pending,,,
 2026-07-08,07:53,GPN,39,72.39,pending,,,
 2026-07-08,07:53,ALGN,38,175.11,pending,,,
+2026-07-09,07:44,PSKY,65,9.05,pending,,,
+2026-07-09,07:44,PLTR,62,125.91,pending,,,
+2026-07-09,07:44,COST,50,912.80,pending,,,
