@@ -38,10 +38,15 @@ def parse_page(html):
     rows = re.findall(r'<tr[^>]*class="[^"]*styled-row[^"]*"[^>]*>(.*?)</tr>', html, re.S)
     out = []
     for r in rows:
-        cells = [re.sub(r"<[^>]+>", "", c).strip()
-                 for c in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
+        raw_cells = re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)
+        cells = [re.sub(r"<[^>]+>", "", c).strip() for c in raw_cells]
         # v=111 columns: No., Ticker, Company, Sector, Industry, Country, MarketCap, P/E, Price, Change, Volume
         if len(cells) >= 11 and re.match(r"^-?[\d.]+%$", cells[9]):
+            # Ticker cell now embeds a logo whose alt/fallback text pollutes
+            # stripped text ("PPNR"); take the ticker from the stock?t= href.
+            m = re.search(r'href="stock\?t=([A-Za-z0-9.\-]+)', raw_cells[1])
+            if m:
+                cells[1] = m.group(1)
             mc = cells[6]
             mult = {"B": 1.0, "T": 1000.0, "M": 0.001}.get(mc[-1:], None)
             mcap_b = round(float(mc[:-1]) * mult, 2) if mult and re.match(r"^[\d.]+[TBM]$", mc) else None
