@@ -145,3 +145,4 @@ run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_
 2026-07-14,07:44,,IBM,55,218.25,pending,,,,,,,,,,,,,
 2026-07-14,07:44,,CSGP,52,27.01,pending,,,,,,,,,,,,,
 2026-07-14,07:44,,BIIB,50,191.84,pending,,,,,,,,,,,,,
+2026-07-15,01:52,fable-5,PNR,55,63.25,pending,,,,,,-16.42,Industrials,company,guidance,new-lows,light,0,
