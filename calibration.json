@@ -1,0 +1,40 @@
+{
+ "updated": "2026-07-15",
+ "model": "fable-5",
+ "n_samples_all": 77,
+ "n_samples_this_model": 0,
+ "bands_all_models": {
+  "20-29": {
+   "n": 16,
+   "hits": 10,
+   "rate": 0.62
+  },
+  "30-39": {
+   "n": 22,
+   "hits": 17,
+   "rate": 0.77
+  },
+  "40-49": {
+   "n": 24,
+   "hits": 19,
+   "rate": 0.79
+  },
+  "50-59": {
+   "n": 10,
+   "hits": 8,
+   "rate": 0.8
+  },
+  "60-69": {
+   "n": 5,
+   "hits": 5,
+   "rate": 1.0
+  }
+ },
+ "bands_this_model": {},
+ "factors": {
+  "drop_type": {},
+  "cause": {},
+  "intraday_state": {}
+ },
+ "notes": "bands/factors include n & hits; apply nudges only where n>=10 (prefer bands_this_model; fall back to bands_all_models)"
+}
