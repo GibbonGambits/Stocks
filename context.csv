@@ -1,3 +1,4 @@
 run_date,run_time,model,slot,spy_pct,qqq_pct,vix,qualify_count,rout_theme
 2026-07-15,01:52,fable-5,pre-open,0.22,0.45,16.5,1,PNR guidance cut
 2026-07-15,08:09,fable-5,post-open,0.25,-0.58,16.2,23,AI memory/hardware unwind
+2026-07-16,08:09,fable-5,post-open,-0.20,-1.11,16.4,27,AI hardware unwind day 3 / TSMC sell-the-news
