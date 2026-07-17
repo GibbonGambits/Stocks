@@ -1,7 +1,7 @@
 {
- "updated": "2026-07-16",
+ "updated": "2026-07-17",
  "model": "fable-5",
- "n_samples_all": 89,
+ "n_samples_all": 101,
  "n_samples_this_model": 0,
  "bands_all_models": {
   "20-29": {
@@ -20,19 +20,19 @@
    "rate": 0.74
   },
   "50-59": {
-   "n": 12,
-   "hits": 10,
-   "rate": 0.83
+   "n": 17,
+   "hits": 13,
+   "rate": 0.76
   },
   "60-69": {
-   "n": 10,
-   "hits": 10,
-   "rate": 1.0
+   "n": 15,
+   "hits": 14,
+   "rate": 0.93
   },
   "70-79": {
-   "n": 2,
-   "hits": 2,
-   "rate": 1.0
+   "n": 4,
+   "hits": 3,
+   "rate": 0.75
   }
  },
  "bands_this_model": {},

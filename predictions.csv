@@ -133,18 +133,18 @@ run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_
 2026-07-13,07:44,,APP,48,461.54,graded,2026-07-16,0.25,0,2,-6.60,,,,,,,,
 2026-07-13,07:44,,ALNY,45,282.08,graded,2026-07-16,1.66,0,1,-2.21,,,,,,,,
 2026-07-13,07:44,,ON,44,91.53,graded,2026-07-16,4.33,1,1,-1.18,,,,,,,,
-2026-07-14,07:44,,NOW,74,106.08,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,WDAY,72,137.37,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,SYK,68,310.90,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,GEHC,65,62.03,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,ARM,64,283.09,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,ZBH,63,89.51,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,HCA,60,364.77,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,NBIS,58,199.68,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,BAX,57,21.48,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,IBM,55,218.25,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,CSGP,52,27.01,pending,,,,,,,,,,,,,
-2026-07-14,07:44,,BIIB,50,191.84,pending,,,,,,,,,,,,,
+2026-07-14,07:44,,NOW,74,106.08,graded,2026-07-17,2.52,0,1,-6.38,,,,,,,,
+2026-07-14,07:44,,WDAY,72,137.37,graded,2026-07-17,8.04,1,2,2.87,,,,,,,,
+2026-07-14,07:44,,SYK,68,310.90,graded,2026-07-17,8.03,1,2,-0.17,,,,,,,,
+2026-07-14,07:44,,GEHC,65,62.03,graded,2026-07-17,6.00,1,2,-0.39,,,,,,,,
+2026-07-14,07:44,,ARM,64,283.09,graded,2026-07-17,1.91,0,1,-10.77,,,,,,,,
+2026-07-14,07:44,,ZBH,63,89.51,graded,2026-07-17,5.11,1,2,-0.01,,,,,,,,
+2026-07-14,07:44,,HCA,60,364.77,graded,2026-07-17,7.31,1,2,-0.49,,,,,,,,
+2026-07-14,07:44,,NBIS,58,199.68,graded,2026-07-17,1.79,0,1,-15.25,,,,,,,,
+2026-07-14,07:44,,BAX,57,21.48,graded,2026-07-17,8.85,1,2,1.58,,,,,,,,
+2026-07-14,07:44,,IBM,55,218.25,graded,2026-07-17,2.55,0,1,-6.33,,,,,,,,
+2026-07-14,07:44,,CSGP,52,27.01,graded,2026-07-17,13.00,1,2,3.52,,,,,,,,
+2026-07-14,07:44,,BIIB,50,191.84,graded,2026-07-17,9.28,1,2,-3.03,,,,,,,,
 2026-07-15,01:52,fable-5,PNR,55,63.25,pending,,,,,,-16.42,Industrials,company,guidance,new-lows,light,0,
 2026-07-15,08:09,fable-5,SNDK,68,1550.67,pending,,,,,,-11.78,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
 2026-07-15,08:09,fable-5,ELV,66,385.52,pending,,,,,,-9.67,Healthcare,company,earnings,off-lows,heavy,1,
@@ -170,3 +170,15 @@ run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_
 2026-07-16,08:09,fable-5,ARM,52,255.68,pending,,,,,,-7.70,Technology,mixed,sympathy,new-lows,normal,0,semi-unwind
 2026-07-16,08:09,fable-5,GLW,51,157.85,pending,,,,,,-9.49,Technology,sympathy,sympathy,new-lows,heavy,0,optical-reset
 2026-07-16,08:09,fable-5,CIEN,48,394.00,pending,,,,,,-5.85,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
+2026-07-17,08:09,fable-5,NFLX,74,67.83,pending,,,,,,-8.78,Communication Services,company,earnings,near-high,heavy,0,
+2026-07-17,08:09,fable-5,ISRG,68,353.35,pending,,,,,,-12.17,Healthcare,company,earnings,off-lows,heavy,0,
+2026-07-17,08:09,fable-5,SPCX,66,123.69,pending,,,,,,-5.66,Industrials,company,product,off-lows,normal,0,
+2026-07-17,08:09,fable-5,CDNS,62,327.96,pending,,,,,,-10.06,Technology,sympathy,sympathy,off-lows,heavy,0,chip-rout
+2026-07-17,08:09,fable-5,AMAT,60,531.52,pending,,,,,,-5.24,Technology,sympathy,sympathy,near-high,normal,0,chip-rout
+2026-07-17,08:09,fable-5,SNPS,58,375.60,pending,,,,,,-9.93,Technology,sympathy,sympathy,off-lows,heavy,0,chip-rout
+2026-07-17,08:09,fable-5,KLAC,57,209.00,pending,,,,,,-4.73,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
+2026-07-17,08:09,fable-5,INTC,56,92.78,pending,,,,,,-4.33,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
+2026-07-17,08:09,fable-5,HOOD,56,100.27,pending,,,,,,-5.42,Financial,macro,macro,off-lows,normal,0,
+2026-07-17,08:09,fable-5,ALAB,48,297.98,pending,,,,,,-6.81,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
+2026-07-17,08:09,fable-5,AXON,46,517.35,pending,,,,,,-4.50,Industrials,macro,macro,new-lows,light,0,
+2026-07-17,08:09,fable-5,META,44,628.25,pending,,,,,,-5.46,Communication Services,mixed,other,new-lows,normal,0,
