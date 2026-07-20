@@ -145,19 +145,19 @@ run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_
 2026-07-14,07:44,,IBM,55,218.25,graded,2026-07-17,2.55,0,1,-6.33,,,,,,,,
 2026-07-14,07:44,,CSGP,52,27.01,graded,2026-07-17,13.00,1,2,3.52,,,,,,,,
 2026-07-14,07:44,,BIIB,50,191.84,graded,2026-07-17,9.28,1,2,-3.03,,,,,,,,
-2026-07-15,01:52,fable-5,PNR,55,63.25,pending,,,,,,-16.42,Industrials,company,guidance,new-lows,light,0,
-2026-07-15,08:09,fable-5,SNDK,68,1550.67,pending,,,,,,-11.78,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
-2026-07-15,08:09,fable-5,ELV,66,385.52,pending,,,,,,-9.67,Healthcare,company,earnings,off-lows,heavy,1,
-2026-07-15,08:09,fable-5,PNR,64,63.63,pending,,,,,,-15.92,Industrials,company,guidance,off-lows,heavy,0,
-2026-07-15,08:09,fable-5,PGR,62,211.04,pending,,,,,,-6.86,Financial,company,earnings,near-high,heavy,1,
-2026-07-15,08:09,fable-5,MU,60,909.54,pending,,,,,,-7.48,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
-2026-07-15,08:09,fable-5,DELL,58,408.51,pending,,,,,,-10.72,Technology,mixed,supply-chain,off-lows,heavy,0,memory-cost-oem
-2026-07-15,08:09,fable-5,LITE,56,750.84,pending,,,,,,-7.85,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
-2026-07-15,08:09,fable-5,STX,55,812.52,pending,,,,,,-7.49,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
-2026-07-15,08:09,fable-5,WDC,54,519.84,pending,,,,,,-7.72,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
-2026-07-15,08:09,fable-5,GLW,52,173.18,pending,,,,,,-7.71,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
-2026-07-15,08:09,fable-5,NTAP,46,161.60,pending,,,,,,-7.42,Technology,sympathy,supply-chain,new-lows,light,0,memory-cost-oem
-2026-07-15,08:09,fable-5,CIEN,44,417.49,pending,,,,,,-6.59,Technology,sympathy,sympathy,new-lows,light,0,optical-reset
+2026-07-15,01:52,fable-5,PNR,55,63.25,graded,2026-07-20,4.74,1,1,-1.80,-16.42,Industrials,company,guidance,new-lows,light,0,
+2026-07-15,08:09,fable-5,SNDK,68,1550.67,graded,2026-07-20,0.06,0,1,-14.55,-11.78,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
+2026-07-15,08:09,fable-5,ELV,66,385.52,graded,2026-07-20,2.73,0,1,-5.22,-9.67,Healthcare,company,earnings,off-lows,heavy,1,
+2026-07-15,08:09,fable-5,PNR,64,63.63,graded,2026-07-20,4.12,1,1,-2.39,-15.92,Industrials,company,guidance,off-lows,heavy,0,
+2026-07-15,08:09,fable-5,PGR,62,211.04,graded,2026-07-20,0.45,0,2,-3.77,-6.86,Financial,company,earnings,near-high,heavy,1,
+2026-07-15,08:09,fable-5,MU,60,909.54,graded,2026-07-20,-0.61,0,2,-11.60,-7.48,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
+2026-07-15,08:09,fable-5,DELL,58,408.51,graded,2026-07-20,1.30,0,1,-9.88,-10.72,Technology,mixed,supply-chain,off-lows,heavy,0,memory-cost-oem
+2026-07-15,08:09,fable-5,LITE,56,750.84,graded,2026-07-20,-0.51,0,2,-13.32,-7.85,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
+2026-07-15,08:09,fable-5,STX,55,812.52,graded,2026-07-20,-0.48,0,2,-13.80,-7.49,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
+2026-07-15,08:09,fable-5,WDC,54,519.84,graded,2026-07-20,-4.06,0,1,-17.18,-7.72,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
+2026-07-15,08:09,fable-5,GLW,52,173.18,graded,2026-07-20,-3.28,0,1,-15.15,-7.71,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
+2026-07-15,08:09,fable-5,NTAP,46,161.60,graded,2026-07-20,2.33,0,2,-3.30,-7.42,Technology,sympathy,supply-chain,new-lows,light,0,memory-cost-oem
+2026-07-15,08:09,fable-5,CIEN,44,417.49,graded,2026-07-20,-1.72,0,1,-14.01,-6.59,Technology,sympathy,sympathy,new-lows,light,0,optical-reset
 2026-07-16,08:09,fable-5,SNDK,65,1472.58,pending,,,,,,-8.82,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
 2026-07-16,08:09,fable-5,STX,63,773.07,pending,,,,,,-6.67,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
 2026-07-16,08:09,fable-5,WDC,62,477.80,pending,,,,,,-7.01,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
@@ -182,3 +182,5 @@ run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_
 2026-07-17,08:09,fable-5,ALAB,48,297.98,pending,,,,,,-6.81,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
 2026-07-17,08:09,fable-5,AXON,46,517.35,pending,,,,,,-4.50,Industrials,macro,macro,new-lows,light,0,
 2026-07-17,08:09,fable-5,META,44,628.25,pending,,,,,,-5.46,Communication Services,mixed,other,new-lows,normal,0,
+2026-07-20,08:09,fable-5,CMG,55,33.05,pending,,,,,,-4.04,Consumer Cyclical,mixed,other,off-lows,normal,0,
+2026-07-20,08:09,fable-5,HONA,47,202.14,pending,,,,,,-4.48,Industrials,company,ma-artifact,new-lows,normal,0,

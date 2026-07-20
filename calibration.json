@@ -1,8 +1,8 @@
 {
- "updated": "2026-07-17",
+ "updated": "2026-07-20",
  "model": "fable-5",
- "n_samples_all": 101,
- "n_samples_this_model": 0,
+ "n_samples_all": 113,
+ "n_samples_this_model": 12,
  "bands_all_models": {
   "20-29": {
    "n": 16,
@@ -15,19 +15,19 @@
    "rate": 0.77
   },
   "40-49": {
-   "n": 27,
+   "n": 29,
    "hits": 20,
-   "rate": 0.74
+   "rate": 0.69
   },
   "50-59": {
-   "n": 17,
+   "n": 22,
    "hits": 13,
-   "rate": 0.76
+   "rate": 0.59
   },
   "60-69": {
-   "n": 15,
-   "hits": 14,
-   "rate": 0.93
+   "n": 20,
+   "hits": 15,
+   "rate": 0.75
   },
   "70-79": {
    "n": 4,
@@ -35,11 +35,80 @@
    "rate": 0.75
   }
  },
- "bands_this_model": {},
+ "bands_this_model": {
+  "40-49": {
+   "n": 2,
+   "hits": 0,
+   "rate": 0.0
+  },
+  "50-59": {
+   "n": 5,
+   "hits": 0,
+   "rate": 0.0
+  },
+  "60-69": {
+   "n": 5,
+   "hits": 1,
+   "rate": 0.2
+  }
+ },
  "factors": {
-  "drop_type": {},
-  "cause": {},
-  "intraday_state": {}
+  "drop_type": {
+   "company": {
+    "n": 3,
+    "hits": 1,
+    "rate": 0.33
+   },
+   "mixed": {
+    "n": 1,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "sympathy": {
+    "n": 8,
+    "hits": 0,
+    "rate": 0.0
+   }
+  },
+  "cause": {
+   "earnings": {
+    "n": 2,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "guidance": {
+    "n": 1,
+    "hits": 1,
+    "rate": 1.0
+   },
+   "supply-chain": {
+    "n": 2,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "sympathy": {
+    "n": 7,
+    "hits": 0,
+    "rate": 0.0
+   }
+  },
+  "intraday_state": {
+   "near-high": {
+    "n": 1,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "new-lows": {
+    "n": 2,
+    "hits": 0,
+    "rate": 0.0
+   },
+   "off-lows": {
+    "n": 9,
+    "hits": 1,
+    "rate": 0.11
+   }
+  }
  },
  "notes": "bands/factors include n & hits; apply nudges only where n>=10 (prefer bands_this_model; fall back to bands_all_models)"
 }
