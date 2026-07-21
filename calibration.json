@@ -1,8 +1,8 @@
 {
- "updated": "2026-07-20",
- "model": "fable-5",
- "n_samples_all": 113,
- "n_samples_this_model": 12,
+ "updated": "2026-07-21",
+ "model": "opus-4.8",
+ "n_samples_all": 125,
+ "n_samples_this_model": 0,
  "bands_all_models": {
   "20-29": {
    "n": 16,
@@ -15,19 +15,19 @@
    "rate": 0.77
   },
   "40-49": {
-   "n": 29,
+   "n": 30,
    "hits": 20,
-   "rate": 0.69
+   "rate": 0.67
   },
   "50-59": {
-   "n": 22,
-   "hits": 13,
-   "rate": 0.59
+   "n": 30,
+   "hits": 19,
+   "rate": 0.63
   },
   "60-69": {
-   "n": 20,
-   "hits": 15,
-   "rate": 0.75
+   "n": 23,
+   "hits": 17,
+   "rate": 0.74
   },
   "70-79": {
    "n": 4,
@@ -35,23 +35,7 @@
    "rate": 0.75
   }
  },
- "bands_this_model": {
-  "40-49": {
-   "n": 2,
-   "hits": 0,
-   "rate": 0.0
-  },
-  "50-59": {
-   "n": 5,
-   "hits": 0,
-   "rate": 0.0
-  },
-  "60-69": {
-   "n": 5,
-   "hits": 1,
-   "rate": 0.2
-  }
- },
+ "bands_this_model": {},
  "factors": {
   "drop_type": {
    "company": {
@@ -60,14 +44,14 @@
     "rate": 0.33
    },
    "mixed": {
-    "n": 1,
-    "hits": 0,
-    "rate": 0.0
+    "n": 3,
+    "hits": 2,
+    "rate": 0.67
    },
    "sympathy": {
-    "n": 8,
-    "hits": 0,
-    "rate": 0.0
+    "n": 18,
+    "hits": 6,
+    "rate": 0.33
    }
   },
   "cause": {
@@ -87,9 +71,9 @@
     "rate": 0.0
    },
    "sympathy": {
-    "n": 7,
-    "hits": 0,
-    "rate": 0.0
+    "n": 19,
+    "hits": 8,
+    "rate": 0.42
    }
   },
   "intraday_state": {
@@ -99,14 +83,14 @@
     "rate": 0.0
    },
    "new-lows": {
-    "n": 2,
-    "hits": 0,
-    "rate": 0.0
+    "n": 8,
+    "hits": 5,
+    "rate": 0.62
    },
    "off-lows": {
-    "n": 9,
-    "hits": 1,
-    "rate": 0.11
+    "n": 15,
+    "hits": 4,
+    "rate": 0.27
    }
   }
  },

@@ -4,3 +4,4 @@ run_date,run_time,model,slot,spy_pct,qqq_pct,vix,qualify_count,rout_theme
 2026-07-16,08:09,fable-5,post-open,-0.20,-1.11,16.4,27,AI hardware unwind day 3 / TSMC sell-the-news
 2026-07-17,08:09,fable-5,post-open,-0.84,-1.71,18.13,14,China AI model chip rout day 4
 2026-07-20,08:09,fable-5,post-open,0.20,0.64,18.4,2,none - bounce day after chip rout
+2026-07-21,08:16,opus-4.8,post-open,0.72,1.76,17.4,6,sell-the-news Q2 earnings reactions
