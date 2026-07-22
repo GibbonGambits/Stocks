@@ -158,29 +158,35 @@ run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_
 2026-07-15,08:09,fable-5,GLW,52,173.18,graded,2026-07-20,-3.28,0,1,-15.15,-7.71,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
 2026-07-15,08:09,fable-5,NTAP,46,161.60,graded,2026-07-20,2.33,0,2,-3.30,-7.42,Technology,sympathy,supply-chain,new-lows,light,0,memory-cost-oem
 2026-07-15,08:09,fable-5,CIEN,44,417.49,graded,2026-07-20,-1.72,0,1,-14.01,-6.59,Technology,sympathy,sympathy,new-lows,light,0,optical-reset
-2026-07-16,08:09,fable-5,SNDK,65,1472.58,pending,,,,,,-8.82,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
-2026-07-16,08:09,fable-5,STX,63,773.07,pending,,,,,,-6.67,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
-2026-07-16,08:09,fable-5,WDC,62,477.80,pending,,,,,,-7.01,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
-2026-07-16,08:09,fable-5,ALAB,58,326.50,pending,,,,,,-6.88,Technology,sympathy,sympathy,off-lows,normal,0,semi-unwind
-2026-07-16,08:09,fable-5,LITE,57,712.03,pending,,,,,,-5.32,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
-2026-07-16,08:09,fable-5,RKLB,56,68.33,pending,,,,,,-10.33,Industrials,sympathy,sympathy,new-lows,heavy,0,
-2026-07-16,08:09,fable-5,COHR,55,278.87,pending,,,,,,-6.85,Technology,sympathy,sympathy,new-lows,normal,0,optical-reset
-2026-07-16,08:09,fable-5,NBIS,54,182.29,pending,,,,,,-8.63,Technology,mixed,sympathy,new-lows,normal,0,
-2026-07-16,08:09,fable-5,MRVL,53,190.91,pending,,,,,,-7.44,Technology,sympathy,sympathy,new-lows,normal,0,semi-unwind
-2026-07-16,08:09,fable-5,ARM,52,255.68,pending,,,,,,-7.70,Technology,mixed,sympathy,new-lows,normal,0,semi-unwind
-2026-07-16,08:09,fable-5,GLW,51,157.85,pending,,,,,,-9.49,Technology,sympathy,sympathy,new-lows,heavy,0,optical-reset
-2026-07-16,08:09,fable-5,CIEN,48,394.00,pending,,,,,,-5.85,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
-2026-07-17,08:09,fable-5,NFLX,74,67.83,pending,,,,,,-8.78,Communication Services,company,earnings,near-high,heavy,0,
-2026-07-17,08:09,fable-5,ISRG,68,353.35,pending,,,,,,-12.17,Healthcare,company,earnings,off-lows,heavy,0,
-2026-07-17,08:09,fable-5,SPCX,66,123.69,pending,,,,,,-5.66,Industrials,company,product,off-lows,normal,0,
-2026-07-17,08:09,fable-5,CDNS,62,327.96,pending,,,,,,-10.06,Technology,sympathy,sympathy,off-lows,heavy,0,chip-rout
-2026-07-17,08:09,fable-5,AMAT,60,531.52,pending,,,,,,-5.24,Technology,sympathy,sympathy,near-high,normal,0,chip-rout
-2026-07-17,08:09,fable-5,SNPS,58,375.60,pending,,,,,,-9.93,Technology,sympathy,sympathy,off-lows,heavy,0,chip-rout
-2026-07-17,08:09,fable-5,KLAC,57,209.00,pending,,,,,,-4.73,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
-2026-07-17,08:09,fable-5,INTC,56,92.78,pending,,,,,,-4.33,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
-2026-07-17,08:09,fable-5,HOOD,56,100.27,pending,,,,,,-5.42,Financial,macro,macro,off-lows,normal,0,
-2026-07-17,08:09,fable-5,ALAB,48,297.98,pending,,,,,,-6.81,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
-2026-07-17,08:09,fable-5,AXON,46,517.35,pending,,,,,,-4.50,Industrials,macro,macro,new-lows,light,0,
-2026-07-17,08:09,fable-5,META,44,628.25,pending,,,,,,-5.46,Communication Services,mixed,other,new-lows,normal,0,
+2026-07-16,08:09,fable-5,SNDK,65,1472.58,graded,2026-07-22,1.94,0,1,-10.02,-8.82,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
+2026-07-16,08:09,fable-5,STX,63,773.07,graded,2026-07-22,7.58,1,2,-9.40,-6.67,Technology,sympathy,sympathy,off-lows,normal,0,memory-unwind
+2026-07-16,08:09,fable-5,WDC,62,477.80,graded,2026-07-22,5.90,1,2,-9.90,-7.01,Technology,sympathy,sympathy,off-lows,heavy,0,memory-unwind
+2026-07-16,08:09,fable-5,ALAB,58,326.50,graded,2026-07-22,-1.17,0,2,-11.30,-6.88,Technology,sympathy,sympathy,off-lows,normal,0,semi-unwind
+2026-07-16,08:09,fable-5,LITE,57,712.03,graded,2026-07-22,12.61,1,2,-8.60,-5.32,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
+2026-07-16,08:09,fable-5,RKLB,56,68.33,graded,2026-07-22,3.37,1,1,-5.59,-10.33,Industrials,sympathy,sympathy,new-lows,heavy,0,
+2026-07-16,08:09,fable-5,COHR,55,278.87,graded,2026-07-22,7.17,1,2,-8.51,-6.85,Technology,sympathy,sympathy,new-lows,normal,0,optical-reset
+2026-07-16,08:09,fable-5,NBIS,54,182.29,graded,2026-07-22,6.61,1,2,-9.86,-8.63,Technology,mixed,sympathy,new-lows,normal,0,
+2026-07-16,08:09,fable-5,MRVL,53,190.91,graded,2026-07-22,5.85,1,2,-6.79,-7.44,Technology,sympathy,sympathy,new-lows,normal,0,semi-unwind
+2026-07-16,08:09,fable-5,ARM,52,255.68,graded,2026-07-22,8.49,1,2,-4.91,-7.70,Technology,mixed,sympathy,new-lows,normal,0,semi-unwind
+2026-07-16,08:09,fable-5,GLW,51,157.85,graded,2026-07-22,1.70,0,2,-6.91,-9.49,Technology,sympathy,sympathy,new-lows,heavy,0,optical-reset
+2026-07-16,08:09,fable-5,CIEN,48,394.00,graded,2026-07-22,0.14,0,2,-8.88,-5.85,Technology,sympathy,sympathy,off-lows,normal,0,optical-reset
+2026-07-17,08:09,fable-5,NFLX,74,67.83,graded,2026-07-22,1.36,0,2,-1.68,-8.78,Communication Services,company,earnings,near-high,heavy,0,
+2026-07-17,08:09,fable-5,ISRG,68,353.35,graded,2026-07-22,2.69,0,2,-3.18,-12.17,Healthcare,company,earnings,off-lows,heavy,0,
+2026-07-17,08:09,fable-5,SPCX,66,123.69,graded,2026-07-22,5.00,1,2,-3.24,-5.66,Industrials,company,product,off-lows,normal,0,
+2026-07-17,08:09,fable-5,CDNS,62,327.96,graded,2026-07-22,5.85,1,2,0.12,-10.06,Technology,sympathy,sympathy,off-lows,heavy,0,chip-rout
+2026-07-17,08:09,fable-5,AMAT,60,531.52,graded,2026-07-22,7.71,1,2,-1.61,-5.24,Technology,sympathy,sympathy,near-high,normal,0,chip-rout
+2026-07-17,08:09,fable-5,SNPS,58,375.60,graded,2026-07-22,4.11,1,2,-0.46,-9.93,Technology,sympathy,sympathy,off-lows,heavy,0,chip-rout
+2026-07-17,08:09,fable-5,KLAC,57,209.00,graded,2026-07-22,5.74,1,2,-1.00,-4.73,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
+2026-07-17,08:09,fable-5,INTC,56,92.78,graded,2026-07-22,14.62,1,2,4.46,-4.33,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
+2026-07-17,08:09,fable-5,HOOD,56,100.27,graded,2026-07-22,7.92,1,2,-1.66,-5.42,Financial,macro,macro,off-lows,normal,0,
+2026-07-17,08:09,fable-5,ALAB,48,297.98,graded,2026-07-22,11.16,1,2,3.16,-6.81,Technology,sympathy,sympathy,off-lows,normal,0,chip-rout
+2026-07-17,08:09,fable-5,AXON,46,517.35,graded,2026-07-22,3.09,1,2,-3.33,-4.50,Industrials,macro,macro,new-lows,light,0,
+2026-07-17,08:09,fable-5,META,44,628.25,graded,2026-07-22,4.40,1,2,1.24,-5.46,Communication Services,mixed,other,new-lows,normal,0,
 2026-07-20,08:09,fable-5,CMG,55,33.05,pending,,,,,,-4.04,Consumer Cyclical,mixed,other,off-lows,normal,0,
 2026-07-20,08:09,fable-5,HONA,47,202.14,pending,,,,,,-4.48,Industrials,company,ma-artifact,new-lows,normal,0,
+2026-07-22,08:09,opus-4.8,TEL,63,196.33,pending,,,,,,-6.07,Technology,company,earnings,off-lows,heavy,1,
+2026-07-22,08:09,opus-4.8,GEV,55,1013.17,pending,,,,,,-6.08,Industrials,company,earnings,off-lows,heavy,1,
+2026-07-22,08:09,opus-4.8,PLTR,53,126.97,pending,,,,,,-4.29,Technology,sympathy,sympathy,new-lows,normal,0,software-ai-fear
+2026-07-22,08:09,opus-4.8,DASH,52,179.48,pending,,,,,,-4.55,Consumer Cyclical,sympathy,sympathy,off-lows,normal,0,
+2026-07-22,08:09,opus-4.8,NOW,50,96.86,pending,,,,,,-5.10,Technology,mixed,earnings,new-lows,heavy,1,software-ai-fear
+2026-07-22,08:09,opus-4.8,WDAY,46,135.39,pending,,,,,,-4.09,Technology,mixed,sympathy,off-lows,light,0,software-ai-fear
