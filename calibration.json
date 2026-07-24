@@ -1,8 +1,9 @@
 {
  "updated": "2026-07-23",
- "model": "opus-4.8",
+ "model": "fable-5",
  "n_samples_all": 139,
- "n_samples_this_model": 0,
+ "n_samples_this_model": 38,
+ "n_samples_5td": 113,
  "bands_all_models": {
   "20-29": {
    "n": 16,
@@ -35,7 +36,77 @@
    "rate": 0.6
   }
  },
- "bands_this_model": {},
+ "bands_this_model": {
+  "40-49": {
+   "n": 7,
+   "hits": 4,
+   "rate": 0.57
+  },
+  "50-59": {
+   "n": 18,
+   "hits": 10,
+   "rate": 0.56
+  },
+  "60-69": {
+   "n": 12,
+   "hits": 6,
+   "rate": 0.5
+  },
+  "70-79": {
+   "n": 1,
+   "hits": 0,
+   "rate": 0.0
+  }
+ },
+ "bands_all_models_5td": {
+  "20-29": {
+   "n": 16,
+   "hits": 12,
+   "rate": 0.75
+  },
+  "30-39": {
+   "n": 22,
+   "hits": 17,
+   "rate": 0.77
+  },
+  "40-49": {
+   "n": 29,
+   "hits": 22,
+   "rate": 0.76
+  },
+  "50-59": {
+   "n": 22,
+   "hits": 19,
+   "rate": 0.86
+  },
+  "60-69": {
+   "n": 20,
+   "hits": 18,
+   "rate": 0.9
+  },
+  "70-79": {
+   "n": 4,
+   "hits": 3,
+   "rate": 0.75
+  }
+ },
+ "bands_this_model_5td": {
+  "40-49": {
+   "n": 2,
+   "hits": 1,
+   "rate": 0.5
+  },
+  "50-59": {
+   "n": 5,
+   "hits": 4,
+   "rate": 0.8
+  },
+  "60-69": {
+   "n": 5,
+   "hits": 3,
+   "rate": 0.6
+  }
+ },
  "factors": {
   "drop_type": {
    "company": {
@@ -119,5 +190,5 @@
    }
   }
  },
- "notes": "bands/factors include n & hits; apply nudges only where n>=10 (prefer bands_this_model; fall back to bands_all_models)"
+ "notes": "bands/factors include n & hits; apply nudges only where n>=10 (prefer bands_this_model; fall back to bands_all_models). *_5td bands are analysis-only context (patience effect); the S4 prediction target stays the 2td rebound"
 }

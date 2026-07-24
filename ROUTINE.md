@@ -14,7 +14,7 @@ MODEL ID: Determine at runtime the model id this run is executing on (e.g. opus-
 DATE/SESSION: Determine today's actual date at runtime; use it in all searches and log rows. Record the run time in US Pacific (your local, 24h HH:MM). Recommended run slots (PT): ~7:00 (post-open), ~9:30 (midday), ~12:00 (about an hour before the 1:00 PM PT close) — identify which slot this run is. Note whether the US market is pre-open / open / closed at run time. "2 trading days" = the next 2 NYSE sessions, skipping weekends and US market holidays (including observed holidays and early closes — check the NYSE calendar for the current week). A trading day is "completed" only after that session's close.
 
 predictions.csv schema (create on main with this header if missing):
-run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_2td,hit,peak_day,min_pct_2td,drop_pct,sector,drop_type,cause,intraday_state,vol_signature,earnings_soon,corr_group
+run_date,run_time,model,ticker,rebound_pct,ref_price,status,graded_date,max_pct_2td,hit,peak_day,min_pct_2td,drop_pct,sector,drop_type,cause,intraday_state,vol_signature,earnings_soon,corr_group,max_pct_5td,hit_5td
 MIGRATION: if predictions.csv exists with an older header (fewer columns), rewrite the header to the full schema above, preserve all existing rows, and leave the new columns blank for existing rows. Never reorder or delete existing columns or rows.
 Feature column definitions (set at pick time in S8, from S3 findings):
 - drop_pct: today's % change at pick time (negative number, 2 decimals)
@@ -25,6 +25,8 @@ Feature column definitions (set at pick time in S8, from S3 findings):
 - vol_signature: heavy | normal | light (vs 90-day average pro-rated for time of day)
 - earnings_soon: 1 if earnings within 5 calendar days, else 0
 - corr_group: short slug shared by picks driven by the same story this run (e.g. "hca-payer", "ibm-software"); blank if standalone
+Secondary-horizon columns (filled by S0's grader later, NOT at pick time — leave blank in S8):
+- max_pct_5td / hit_5td: same definitions as max_pct_2td/hit but over the first 5 NYSE sessions after run_date; grade.py fills them only once all 5 sessions have closed, so a row is status=graded at 2td first and gets its 5td fields on a later run. Analysis-only: the S4 prediction target and the hit/status columns remain the 2-trading-day horizon.
 
 context.csv schema (create with header if missing):
 run_date,run_time,model,slot,spy_pct,qqq_pct,vix,qualify_count,rout_theme
@@ -32,8 +34,8 @@ One row per run, written in S8: SPY and QQQ % change today and VIX level (raw-fe
 
 S0 GRADE & CALIBRATE (do first):
 Run: python3 scripts/grade.py --model <this run's model id>
-The script migrates predictions.csv to the current schema if needed, grades every due pending row (both of the 2 NYSE sessions after run_date fully closed; max_pct_2td from the window's highest high vs ref_price; hit=1 if ≥3; peak_day; min_pct_2td from lowest low; graded_date=today; never re-grades), and writes calibration.json (per-band hit rates same-model and all-model, factor rates for drop_type/cause/intraday_state, sample counts). Read its JSON output. Exit 4 = some due rows couldn't fetch history — retry those tickers manually per G1 (fallback source: finance.yahoo.com/quote/TICKER/history) and update the rows yourself. Sanity-check 1-2 graded values against the raw source before trusting a surprising grade (per G3).
-CALIBRATE: From calibration.json — bands with ≥10 samples that systematically over/under-shoot: nudge today's S4 outputs toward observed rates (prefer bands_this_model; fall back to bands_all_models where the same-model count is <10). Factor rates with ≥10 samples feed S4 as secondary evidence. Hold a one-line summary for internal use.
+The script migrates predictions.csv to the current schema if needed, grades every due pending row (both of the 2 NYSE sessions after run_date fully closed; max_pct_2td from the window's highest high vs ref_price; hit=1 if ≥3; peak_day; min_pct_2td from lowest low; graded_date=today; never re-grades), backfills max_pct_5td/hit_5td for any graded row whose first 5 post-run sessions have all closed (hit_5td=1 if ≥3; never re-fills), and writes calibration.json (per-band hit rates same-model and all-model at both the 2td and 5td horizons, factor rates for drop_type/cause/intraday_state, sample counts). Read its JSON output. Exit 4 = some due rows couldn't fetch history — retry those tickers manually per G1 (fallback source: finance.yahoo.com/quote/TICKER/history) and update the rows yourself. Sanity-check 1-2 graded values against the raw source before trusting a surprising grade (per G3).
+CALIBRATE: From calibration.json — bands with ≥10 samples that systematically over/under-shoot: nudge today's S4 outputs toward observed rates (prefer bands_this_model; fall back to bands_all_models where the same-model count is <10). Factor rates with ≥10 samples feed S4 as secondary evidence. The *_5td bands are analysis-only context (how much a longer hold converts near-misses) — never calibrate the S4 number against them; S4 stays targeted at the 2td rebound. Hold a one-line summary for internal use.
 
 S1 SCREEN (mechanical — do fast, per rules G1–G3):
 Criteria — keep tickers meeting ALL, right now: price change ≤ -4.00% (today, vs prior close); market cap ≥ $10B USD (no upper limit); 90-day avg volume ≥ 400,000; member of DJIA, NASDAQ 100, OR S&P 500.
