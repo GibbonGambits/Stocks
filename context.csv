@@ -11,3 +11,4 @@ run_date,run_time,model,slot,spy_pct,qqq_pct,vix,qualify_count,rout_theme
 2026-07-23,22:39,opus-4.8,closed,-1.23,-1.9,18.7,22,Big-tech Q2 earnings rout / megacap capex fears
 2026-07-23,23:39,opus-4.8,closed,-1.23,-1.90,18.7,22,Big-tech Q2 earnings rout / megacap capex fears
 2026-07-24,08:18,opus-4.8,post-open,0.35,-0.65,17.91,26,AI-hardware/semi valuation rotation (memory HBM-glut + AI-capex ROI fears)
+2026-07-24,14:37,opus-5.0,closed,0.10,-1.12,18.58,31,"AI-hardware de-rating + Korea memory rout (rotation, not broad risk-off)"

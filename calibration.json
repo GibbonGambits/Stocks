@@ -1,8 +1,8 @@
 {
  "updated": "2026-07-24",
- "model": "opus-4.8",
+ "model": "opus-5.0",
  "n_samples_all": 145,
- "n_samples_this_model": 6,
+ "n_samples_this_model": 0,
  "n_samples_5td": 125,
  "bands_all_models": {
   "20-29": {
@@ -36,28 +36,7 @@
    "rate": 0.6
   }
  },
- "bands_this_model": {
-  "30-39": {
-   "n": 1,
-   "hits": 0,
-   "rate": 0.0
-  },
-  "40-49": {
-   "n": 1,
-   "hits": 0,
-   "rate": 0.0
-  },
-  "50-59": {
-   "n": 3,
-   "hits": 3,
-   "rate": 1.0
-  },
-  "60-69": {
-   "n": 1,
-   "hits": 1,
-   "rate": 1.0
-  }
- },
+ "bands_this_model": {},
  "bands_all_models_5td": {
   "20-29": {
    "n": 16,
