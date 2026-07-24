@@ -30,6 +30,16 @@ def today_eastern():
     # conservative choice (later date rollover = never grades a day too early).
     return (datetime.now(timezone.utc) - timedelta(hours=5)).date()
 
+def weekdays_between(d1, d2):
+    """Weekdays strictly between d1 and d2. Sessions are a subset of weekdays,
+    so a count < N proves an N-session window cannot be complete yet."""
+    n, d = 0, d1 + timedelta(days=1)
+    while d < d2:
+        if d.weekday() < 5:
+            n += 1
+        d += timedelta(days=1)
+    return n
+
 def fetch_history(ticker, retries=3):
     url = f"https://stockanalysis.com/stocks/{ticker}/history/"
     for i in range(retries):
@@ -59,18 +69,21 @@ def fetch_history(ticker, retries=3):
             return sorted(rows, key=lambda r: r["date"])
     return None
 
-def migrate(rows):
-    """Return rows as dicts keyed by v2 HEADER, padding missing columns."""
+def migrate(rows, cols=None):
+    """Return rows as dicts keyed by cols (HEADER + any unknown extra columns,
+    preserved verbatim per the spec's never-delete rule), padding missing ones."""
+    cols = cols or HEADER
+    extras = [c for c in cols if c not in HEADER]
     out = []
     for r in rows:
-        d = dict.fromkeys(HEADER, "")
+        d = dict.fromkeys(cols, "")
         if "model" in r:                      # already v2-ish
-            for k in HEADER:
-                d[k] = r.get(k, "")
+            for k in cols:
+                d[k] = r.get(k, "") or ""
         else:                                  # v1: no model / feature columns
             for k in ("run_date", "run_time", "ticker", "rebound_pct", "ref_price",
-                      "status", "graded_date", "max_pct_2td", "hit"):
-                d[k] = r.get(k, "")
+                      "status", "graded_date", "max_pct_2td", "hit", *extras):
+                d[k] = r.get(k, "") or ""
         out.append(d)
     return out
 
@@ -84,17 +97,20 @@ def grade(rows, dry):
         if not (needs_2td or needs_5td):
             continue
         run_date = datetime.strptime(r["run_date"], "%Y-%m-%d").date()
-        # cheap calendar guard before fetching: 2 sessions need >=2 calendar
-        # days; 5 sessions need >=7 (a 5-session window always spans a weekend)
-        days_gone = (today - run_date).days
-        if days_gone < 2 or (not needs_2td and days_gone < 7):
+        # pre-fetch guards: an N-session window needs >= N closed weekdays, so
+        # skip the fetch (and never report a fetch failure) for rows that
+        # cannot possibly be due yet. 5td additionally needs >= 7 calendar
+        # days (a 5-session window always spans a weekend).
+        could_2td = needs_2td and weekdays_between(run_date, today) >= 2
+        could_5td = needs_5td and (today - run_date).days >= 7
+        if not (could_2td or could_5td):
             continue
         t = r["ticker"]
         if t not in by_ticker:
             by_ticker[t] = fetch_history(t)
         hist = by_ticker[t]
         if hist is None:
-            if needs_2td:
+            if could_2td:
                 skipped.append(f"{t} ({r['run_date']}): history fetch failed")
             continue
         window = [h for h in hist if run_date < h["date"] < today]
@@ -189,13 +205,16 @@ def main():
     a = ap.parse_args()
 
     with open(a.csv, newline="") as f:
-        rows = migrate(list(csv.DictReader(f)))
+        rd = csv.DictReader(f)
+        raw = list(rd)
+        cols = HEADER + [c for c in (rd.fieldnames or []) if c not in HEADER]
+    rows = migrate(raw, cols)
     graded_n, filled5_n, skipped = grade(rows, a.dry_run)
     calib = calibrate(rows, a.model)
 
     if not a.dry_run:
         with open(a.csv, "w", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=HEADER)
+            w = csv.DictWriter(f, fieldnames=cols)
             w.writeheader()
             w.writerows(rows)
         with open(a.calib, "w") as f:
