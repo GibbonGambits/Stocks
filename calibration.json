@@ -1,8 +1,8 @@
 {
  "updated": "2026-07-24",
  "model": "opus-4.8",
- "n_samples_all": 139,
- "n_samples_this_model": 0,
+ "n_samples_all": 145,
+ "n_samples_this_model": 6,
  "n_samples_5td": 125,
  "bands_all_models": {
   "20-29": {
@@ -11,24 +11,24 @@
    "rate": 0.62
   },
   "30-39": {
-   "n": 22,
+   "n": 23,
    "hits": 17,
-   "rate": 0.77
+   "rate": 0.74
   },
   "40-49": {
-   "n": 34,
+   "n": 35,
    "hits": 24,
-   "rate": 0.71
+   "rate": 0.69
   },
   "50-59": {
-   "n": 35,
-   "hits": 23,
-   "rate": 0.66
+   "n": 38,
+   "hits": 26,
+   "rate": 0.68
   },
   "60-69": {
-   "n": 27,
-   "hits": 20,
-   "rate": 0.74
+   "n": 28,
+   "hits": 21,
+   "rate": 0.75
   },
   "70-79": {
    "n": 5,
@@ -36,7 +36,28 @@
    "rate": 0.6
   }
  },
- "bands_this_model": {},
+ "bands_this_model": {
+  "30-39": {
+   "n": 1,
+   "hits": 0,
+   "rate": 0.0
+  },
+  "40-49": {
+   "n": 1,
+   "hits": 0,
+   "rate": 0.0
+  },
+  "50-59": {
+   "n": 3,
+   "hits": 3,
+   "rate": 1.0
+  },
+  "60-69": {
+   "n": 1,
+   "hits": 1,
+   "rate": 1.0
+  }
+ },
  "bands_all_models_5td": {
   "20-29": {
    "n": 16,
@@ -73,9 +94,9 @@
  "factors": {
   "drop_type": {
    "company": {
-    "n": 7,
-    "hits": 3,
-    "rate": 0.43
+    "n": 11,
+    "hits": 7,
+    "rate": 0.64
    },
    "macro": {
     "n": 2,
@@ -83,26 +104,26 @@
     "rate": 1.0
    },
    "mixed": {
-    "n": 5,
+    "n": 6,
     "hits": 3,
-    "rate": 0.6
+    "rate": 0.5
    },
    "sympathy": {
-    "n": 24,
+    "n": 25,
     "hits": 12,
-    "rate": 0.5
+    "rate": 0.48
    }
   },
   "cause": {
    "earnings": {
-    "n": 4,
-    "hits": 0,
-    "rate": 0.0
+    "n": 6,
+    "hits": 2,
+    "rate": 0.33
    },
    "guidance": {
-    "n": 1,
-    "hits": 1,
-    "rate": 1.0
+    "n": 4,
+    "hits": 3,
+    "rate": 0.75
    },
    "ma-artifact": {
     "n": 1,
@@ -130,25 +151,25 @@
     "rate": 0.0
    },
    "sympathy": {
-    "n": 25,
+    "n": 26,
     "hits": 14,
-    "rate": 0.56
+    "rate": 0.54
    }
   },
   "intraday_state": {
    "near-high": {
-    "n": 3,
-    "hits": 1,
-    "rate": 0.33
+    "n": 6,
+    "hits": 4,
+    "rate": 0.67
    },
    "new-lows": {
-    "n": 11,
+    "n": 12,
     "hits": 8,
-    "rate": 0.73
+    "rate": 0.67
    },
    "off-lows": {
-    "n": 24,
-    "hits": 11,
+    "n": 26,
+    "hits": 12,
     "rate": 0.46
    }
   }
