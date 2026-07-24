@@ -9,3 +9,4 @@ effective_date,area,change_text
 2026-07-24,grade.py,Audit hardening: grader preserves unknown CSV columns and uses weekday-aware due logic (no premature grading of rows whose window cannot be complete).
 2026-07-24,spec,"Spec clarifications: effort source, script fixes must be committed, recalibrate after manual grading, allowed slot values enumerated."
 2026-07-24,spec,"logic_changes.csv changelog added; any run changing spec, scripts, or config must append a row here in the same commit."
+2026-07-24,config,CI workflow sync-main.yml added: run-branch commits now auto-fast-forward into main (platform restricts routine sessions to claude/* branches); spec updated to permit committing on the session branch.

@@ -1,0 +1,44 @@
+name: sync-main
+# Fast-forwards main from claude/* session branches. Scheduled routine runs are
+# restricted by the platform to pushing claude/* branches; this lands their data
+# on main automatically. Guards: fast-forward only (never merge/force), and only
+# when the branch changes nothing outside the spec's whitelisted files. Changes
+# to this workflow itself are deliberately NOT auto-synced.
+on:
+  push:
+    branches: ['claude/**']
+permissions:
+  contents: write
+concurrency:
+  group: sync-main
+  cancel-in-progress: false
+jobs:
+  fastforward:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Fast-forward main from run branch
+        env:
+          SHA: ${{ github.sha }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git fetch origin "$SHA"
+          if [ "$(git rev-parse HEAD)" = "$SHA" ]; then
+            echo "already synced"; exit 0
+          fi
+          if ! git merge-base --is-ancestor HEAD "$SHA"; then
+            echo "not fast-forwardable ($BRANCH diverged from or is behind main) - skipping"; exit 0
+          fi
+          CHANGED=$(git diff --name-only HEAD "$SHA")
+          echo "changed files:"; echo "$CHANGED"
+          BAD=$(echo "$CHANGED" | grep -vE '^(predictions\.csv|context\.csv|calibration\.json|logic_changes\.csv|ROUTINE\.md|scripts/[^/]+\.py|\.claude/settings\.json)$' || true)
+          if [ -n "$BAD" ]; then
+            echo "REFUSING to sync - non-whitelisted files changed:"; echo "$BAD"; exit 1
+          fi
+          git merge --ff-only "$SHA"
+          git push origin main
+          echo "main fast-forwarded to $SHA from $BRANCH"
